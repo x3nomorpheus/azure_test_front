@@ -38,9 +38,7 @@
 
     stage('Deploying React.js container to Kubernetes') {
       steps {
-        script {
-          kubernetesDeploy(configs: "deployment.yaml", "service.yaml")
-        }
+         sh 'ssh -i /home/jenkins/.ssh/id_rsa -o "StrictHostKeyChecking no" kio@workstation source /home/kio/k8s/azurek8s && kubectl apply -f /home/kio/k8s/kubernetes-apps/front.yaml' 
       }
     }
 
