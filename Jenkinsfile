@@ -21,7 +21,7 @@
 
       steps {
 	  sh 'cd react-docker && npm install --cache=".customdir/"'
-	  sh 'npm run lint src/*'
+	  sh 'cd react-docker && npm run lint src/*'
       }
     }
 
