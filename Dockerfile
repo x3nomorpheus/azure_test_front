@@ -6,5 +6,4 @@ COPY react-docker/src/ /react-docker/src
 COPY react-docker/package.json /react-docker/
 
 RUN npm install
-CMD [""]
 CMD ["npm", "start"]
