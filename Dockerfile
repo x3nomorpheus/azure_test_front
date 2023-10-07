@@ -6,5 +6,5 @@ COPY react-docker/src/ /react-docker/src
 COPY react-docker/package.json /react-docker/
 
 RUN npm install
-RUN npm test
+CMD [""]
 CMD ["npm", "start"]

@@ -9,6 +9,22 @@
 
   stages {
 
+
+    stage('Running lint test') {
+      agent {
+
+      	docker { image 'node:18.18.0-alpine3.18' }
+
+      } 
+
+      steps {
+	  git 'https://github.com/x3nomorpheus/azure_test_front.git'
+          sh 'npm install'
+	  sh 'npm run lint src/*'
+      }
+    }
+
+
     stage('Checkout Source') {
       steps {
         git 'https://github.com/x3nomorpheus/azure_test_front.git'
