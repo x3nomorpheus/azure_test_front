@@ -18,9 +18,7 @@
       } 
 
       steps {
-	  sh 'apk add git'
-	  sh 'git clone https://github.com/x3nomorpheus/azure_test_front.git && cd azure_test_front'
-          sh 'npm install'
+	  sh 'cd react-docker && npm install'
 	  sh 'npm run lint src/*'
       }
     }
