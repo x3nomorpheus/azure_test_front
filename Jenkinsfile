@@ -13,7 +13,10 @@
     stage('Running lint test') {
       agent {
 
-      	docker { image 'node:18.18.0-alpine3.18' }
+      	docker { 
+	  image 'node:18.18.0-alpine3.18'
+	  args '-u jenkins:jenkins'
+ 	}
 
       } 
 
