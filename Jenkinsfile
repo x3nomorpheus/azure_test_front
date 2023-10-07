@@ -15,13 +15,12 @@
 
       	docker { 
 	  image 'node:18.18.0-alpine3.18'
-	  args '-u jenkins:jenkins'
  	}
 
       } 
 
       steps {
-	  sh 'cd react-docker && npm install'
+	  sh 'cd react-docker && npm install --cache=".customdir/"'
 	  sh 'npm run lint src/*'
       }
     }
