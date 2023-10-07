@@ -15,13 +15,6 @@
       }
     }
 
-    stage('Build app') {
-      steps {
-	sh 'npm install'
-	sh 'npm run build'
-      }
-    }
-
     stage('Build image') {
       steps{
         script {
