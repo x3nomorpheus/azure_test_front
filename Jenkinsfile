@@ -18,7 +18,8 @@
       } 
 
       steps {
-	  git 'https://github.com/x3nomorpheus/azure_test_front.git'
+	  sh 'apk add git'
+	  sh 'git clone https://github.com/x3nomorpheus/azure_test_front.git && cd azure_test_front'
           sh 'npm install'
 	  sh 'npm run lint src/*'
       }
