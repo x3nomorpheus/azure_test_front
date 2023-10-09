@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello from front page. I am a new file
+          This is front page from stage env
         </p>
         <a
           className="App-link"
