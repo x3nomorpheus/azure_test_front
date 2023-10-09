@@ -55,7 +55,7 @@
 
     stage('Deploying React.js container to Kubernetes') {
       steps {
-         sh 'ssh -i /home/jenkins/.ssh/id_rsa -o "StrictHostKeyChecking no" kio@workstation kubectl --kubeconfig /home/kio/k8s/azurek8s delete deployment react'
+         sh 'ssh -i /home/jenkins/.ssh/id_rsa -o "StrictHostKeyChecking no" kio@workstation kubectl --kubeconfig /home/kio/k8s/azurek8s delete deployment react || true'
 	 sh 'ssh -i /home/jenkins/.ssh/id_rsa -o "StrictHostKeyChecking no" kio@workstation kubectl --kubeconfig /home/kio/k8s/azurek8s apply -f /home/kio/k8s/kubernetes-apps/front.yaml'
       }
     }
